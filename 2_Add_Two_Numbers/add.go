@@ -18,8 +18,7 @@ func Walk(n1, n2, nres *ListNode, remainder int) *ListNode {
 	if n2 != nil {
 		v2 = n2.Val
 	}
-
-	// Sum + carry
+	
 	sum := v1 + v2 + remainder
 	newRemainder := 0
 	if sum > 9 {
