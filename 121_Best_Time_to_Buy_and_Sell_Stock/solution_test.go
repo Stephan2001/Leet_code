@@ -1,6 +1,7 @@
 package besttimetobuyandsellstock
 
 import (
+	"math"
 	"testing"
 )
 
@@ -26,13 +27,16 @@ func TestSolution(t *testing.T) {
 }
 
 func maxProfit(prices []int) int {
-	profit := 0
-	for i := 0; i < len(prices); i++ {
-		for k := i + 1; k < len(prices); k++ {
-			if prices[k]-prices[i] > profit {
-				profit = prices[k] - prices[i]
-			}
+	max_sell := 0
+	min_buy := math.MaxInt32
+
+	for _, price := range prices {
+		if price < min_buy {
+			min_buy = price
+		} else if (price - min_buy) > max_sell {
+			max_sell = price
 		}
 	}
-	return profit
+
+	return max_sell
 }
