@@ -1,4 +1,4 @@
-package majorityelement
+package rotatearray
 
 import (
 	"reflect"

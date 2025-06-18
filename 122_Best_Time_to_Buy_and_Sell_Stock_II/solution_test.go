@@ -59,6 +59,6 @@ func maxProfit(prices []int, t testing.TB) int {
 		t.Log("=============")
 	}
 
-	return 0
+	return cur_not_hold
 
 }

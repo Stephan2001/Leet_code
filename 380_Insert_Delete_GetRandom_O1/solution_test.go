@@ -1,4 +1,4 @@
-package jumpgame
+package insertdeletegetrandomo1
 
 import (
 	"math/rand"
